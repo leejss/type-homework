@@ -1,4 +1,7 @@
 // key point: using `in` keyword
+
+// T[P]: get type of property P in T
+
 type MyPick<T, K extends keyof T> = {
   [P in K]: T[P];
 };

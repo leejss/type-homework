@@ -6,8 +6,8 @@
 // P in keyof T => iterate all keys in T
 // as => type assertion, set type of P
 // P extends K => check if P is in K
-
 type MyOmit<T, K extends keyof T> = {
+  // Remapping the type of key
   [P in keyof T as P extends K ? never : P]: T[P];
 };
 
